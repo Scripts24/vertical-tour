@@ -35,10 +35,10 @@ body {
 }
 
 .navbar {
+    width   : 100vw;
     position: fixed;
     top     : 0;
     left    : 0;
-    width   : 100%;
     z-index : 10;
 }
 
@@ -72,6 +72,7 @@ body {
     display        : flex;
     align-items    : center;
     justify-content: flex-end;
+    margin-right   : 5%;
 }
 
 .bar {
@@ -99,6 +100,10 @@ body {
 
 .bar::after {
     transform: translateY(9px);
+}
+
+.main-container {
+    width: 100vw;
 }
 
 .main {
@@ -305,14 +310,16 @@ header {
 @media screen and (max-width:650px) {
 
     .links {
-        top       : 3rem;
-        width     : 100%;
-        height    : 10vh;
-        text-align: center;
+        top           : 3rem;
+        padding-bottom: 2rem;
+        width         : 100%;
+        height        : 10vh;
+        text-align    : center;
     }
 
     .links li {
         display: inline-block;
+
     }
 
     .links a {
@@ -324,8 +331,6 @@ header {
         width: 1.4rem;
     }
 }
-
-
 
 @media screen and (max-width:460px) {
 
@@ -344,6 +349,10 @@ header {
 
     .links a {
         font-size: .6rem;
+    }
+
+    .burguer-menu {
+        margin-right: 1%;
     }
 
 }
