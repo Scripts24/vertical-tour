@@ -25,6 +25,19 @@ html {
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--bg-blue-2);
+    border-radius   : 5rem;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
