@@ -28,6 +28,60 @@ body {
     overflow-x : hidden;
 }
 
+/* PRELOADER */
+
+#preloader {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: black;
+    z-index         : 9999;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.loader {
+    width          : 100px;
+    height         : 100px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin         : 10px 20px;
+}
+
+@keyframes load {
+    50% {
+        transform   : rotatez(180deg) scale(0.2);
+        border-color: orange;
+    }
+
+    100% {
+        transform: rotatez(360deg) scale(1.1);
+    }
+}
+
+@keyframes load7 {
+    100% {
+        transform: rotatez(360deg);
+    }
+}
+
+.loader7::before {
+    content      : "";
+    color        : white;
+    height       : 50px;
+    width        : 50px;
+    background   : transparent;
+    border-radius: 50%;
+    border       : 10px solid blue;
+    border-color : #0277BD #0277BD #0277BD #81D4FA;
+    animation    : load7 .6s infinite ease-in-out;
+    box-shadow   : 0px 0px 40px -2px skyblue;
+}
+
 .heading {
     text-align    : center;
     color         : var(--bg-blue-2);
@@ -308,7 +362,7 @@ header {
 
 .contact {
     padding            : 2rem 7%;
-    background  :  linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.267)), url('../img/bg-contact.jpg');
+    background         : linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.267)), url('../img/bg-contact.jpg');
     background-size    : cover;
     background-position: center;
 }
@@ -335,7 +389,7 @@ header {
     flex      : 1 1 45rem;
     width     : 100%;
     object-fit: cover;
-    filter: opacity(60%);
+    filter    : opacity(60%);
 }
 
 .contact .row form .form-box {
@@ -361,72 +415,72 @@ header {
     background: none;
 }
 
-.bi-question-lg{
+.bi-question-lg {
     margin-bottom: 6rem;
 }
 
 .contact .row form .btn {
-    border-radius: 0;
+    border-radius   : 0;
     background-color: var(--bg-blue-2);
-    color: var(--color-white);
+    color           : var(--color-white);
 }
 
 /*FOOTER*/
 
-footer{
-    padding: 8rem;
+footer {
+    padding   : 8rem;
     background: var(--bg-blue-2);
     border-top: .4rem solid rgba(0, 0, 0, 0.233);
     text-align: center;
 }
 
-footer .contacts{
+footer .contacts {
     padding: 1rem 0;
 }
 
-footer .contacts a{
-    font-size: 2rem;
-    color: var(--color-white);
-    margin: .3rem;
-    padding: .7rem;
-    transition:all .5s ease-in-out;
+footer .contacts a {
+    font-size : 2rem;
+    color     : var(--color-white);
+    margin    : .3rem;
+    padding   : .7rem;
+    transition: all .5s ease-in-out;
 }
 
-footer .contacts a:hover{
+footer .contacts a:hover {
     border: .3rem solid var(--bg-primary);
 }
 
-footer .go-link{
-    display: flex;
+footer .go-link {
+    display        : flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    flex-wrap      : wrap;
+    gap            : 1rem;
+    margin-bottom  : 1rem;
 }
 
-footer .go-link a{
-    color: var(--color-white);
-    font-size: 2rem;
-    padding  : .7rem 1rem;
+footer .go-link a {
+    color     : var(--color-white);
+    font-size : 2rem;
+    padding   : .7rem 1rem;
     transition: .5s;
 }
 
-footer .go-link a:hover{
+footer .go-link a:hover {
     transform: scale(1.2);
 }
 
-footer .developed p{
-    color: var(--color-white);
-    font-size: 2rem;
+footer .developed p {
+    color        : var(--color-white);
+    font-size    : 2rem;
     margin-bottom: 2rem;
-    line-height: 2;
+    line-height  : 2;
 }
 
-footer .developed img{
-    width: 22rem;
-    height: 6rem;
+footer .developed img {
+    width        : 22rem;
+    height       : 6rem;
     margin-bottom: 2rem;
-    border: .2rem solid  #e6eaf0;
+    border       : .2rem solid #e6eaf0;
 }
 
 
@@ -437,7 +491,7 @@ footer .developed img{
 
 @media screen and (max-width:850px) {
 
-    html{
+    html {
         font-size: 55%;
     }
 }
@@ -458,7 +512,7 @@ footer .developed img{
     }
 
     .links a {
-        padding  : .5rem 1rem  ;
+        padding: .5rem 1rem;
     }
 }
 
@@ -471,7 +525,7 @@ footer .developed img{
     .title {
         letter-spacing: 0;
     }
-    
+
     .burguer-menu {
         margin-right: 1%;
     }
