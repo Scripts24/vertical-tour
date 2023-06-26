@@ -19,19 +19,30 @@
     --color-dark  : #000;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x : hidden;
 }
 
+.heading {
+    text-align    : center;
+    color         : var(--bg-blue-2);
+    text-transform: uppercase;
+    font-size     : 4rem;
+}
+
 /*HEADER-NAVBAR 3D*/
 
 .container {
-    min-height      : 100vh;
-    width           : 100vw;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary));
-    transform-style : preserve-3d;
-   
+    min-height     : 100vh;
+    width          : 100vw;
+    background     : linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary));
+    transform-style: preserve-3d;
+
 }
 
 .navbar {
@@ -43,7 +54,6 @@ body {
 }
 
 .menu {
-    max-width      : 72rem;
     width          : 100%;
     margin         : 0 auto;
     padding        : 0 2rem;
@@ -54,7 +64,7 @@ body {
 }
 
 .logo {
-    font-size     : 1.5rem;
+    font-size     : 2.5rem;
     font-weight   : 600;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -66,8 +76,8 @@ body {
 }
 
 .burguer-menu {
-    height         : 4rem;
-    width          : 3rem;
+    height         : 5rem;
+    width          : 4rem;
     cursor         : pointer;
     display        : flex;
     align-items    : center;
@@ -76,9 +86,9 @@ body {
 }
 
 .bar {
-    width           : 1.9rem;
-    height          : 1.5px;
-    border-radius   : 2px;
+    width           : 2.5rem;
+    height          : 2.5px;
+    border-radius   : 5px;
     background-color: var(--color-white);
     transition      : .5s;
     position        : relative;
@@ -103,8 +113,8 @@ body {
 }
 
 .main-container {
-   width: 100vw;
-   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary));
+    width     : 100vw;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary));
 }
 
 .main {
@@ -121,7 +131,7 @@ body {
 header {
     min-height: 100vh;
     width     : 100%;
-    background: url('../img/bg-header.jpg') no-repeat top center / cover;
+    background: url('../img/bg1.jpg') no-repeat top center / cover;
     position  : relative;
 }
 
@@ -131,29 +141,34 @@ header {
     height          : 100%;
     top             : 0;
     left            : 0;
-    background-color: rgba(43, 51, 59, 0.562);
+    background-color: rgba(43, 51, 59, 0.774);
     display         : flex;
     justify-content : center;
     align-items     : center;
 }
 
 .inner {
-    max-width : 35rem;
+    max-width : 50rem;
     text-align: center;
     color     : var(--color-white);
     padding   : 0 2rem;
 }
 
 .title {
-    font-size     : 2.2rem;
+    font-size     : 3rem;
     font-weight   : 500;
     font-style    : italic;
     text-transform: uppercase;
 }
 
+.inner p {
+    font-size  : 1.6rem;
+    font-weight: 600;
+}
+
 .btn {
-    margin-top      : 1rem;
-    padding         : .6rem 1.8rem;
+    margin-top      : 1.5rem;
+    padding         : 1rem 2.8rem;
     background-color: var(--bg-blue-1);
     border-radius   : 2.5rem;
     text-transform  : uppercase;
@@ -205,17 +220,18 @@ header {
 
 .links a {
     color         : var(--color-white);
-    padding       : .7rem 0;
+    padding       : 1rem 0;
     display       : inline-block;
-    font-size     : 1rem;
-    font-weight   : 300;
+    font-size     : 1.6rem;
+    font-weight   : 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 4px;
     transition    : .3s;
 }
 
 .links a:hover {
-    transform: scale(1.1);
+    transform    : scale(1);
+    border-bottom: .5px solid var(--color-white);
 }
 
 .shadow {
@@ -286,31 +302,93 @@ header {
     transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
 }
 
-.home {
-    height: 100vh;
-    background-color: #09233f;
-}
 
-.about {
-    height: 100vh;
-}
 
-.gallery {
-    height: 100vh;
-}
+/*CONTACTO*/
 
 .contact {
-    height: 100vh;
+    margin             : 4rem 0;
+    padding            : 2rem 7%;
+    background  :  linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.267)), url('../img/bg-contact.jpg');
+    background-size    : cover;
+    background-position: center;
 }
+
+.contact h2 {
+    margin-top: 4rem;
+}
+
+.contact .row {
+    display    : flex;
+    align-items: center;
+    flex-wrap  : wrap;
+    gap        : 1rem;
+}
+
+.contact .row form {
+    flex      : 1 1 45rem;
+    padding   : 5rem 3rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.contact .row .map {
+    flex      : 1 1 45rem;
+    width     : 100%;
+    object-fit: cover;
+    filter: opacity(60%);
+}
+
+.contact .row form .form-box {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 1rem;
+    border       : 1rem solid var(--bg-blue-2);
+    background   : var(--color-white);
+}
+
+.contact .row form .form-box span {
+    color       : var(--bg-blue-2);
+    font-size   : 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .form-box input,
+.contact .row form .form-box textarea {
+    width     : 100%;
+    padding   : 1.3rem;
+    font-size : 1.5rem;
+    color     : var(--bg-blue-2);
+    background: none;
+}
+
+.bi-question-lg{
+    margin-bottom: 6rem;
+}
+
+.contact .row form .btn {
+    border-radius: 0;
+    background-color: var(--bg-blue-2);
+    color: var(--color-white);
+}
+
+
 
 /* ====================================================================================== */
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width:850px) {
+
+    html{
+        font-size: 55%;
+    }
+}
+
 @media screen and (max-width:650px) {
 
     .links {
-        top           : 3rem;
+        top           : 6rem;
         padding-bottom: 2rem;
         width         : 100%;
         height        : 10vh;
@@ -323,34 +401,16 @@ header {
     }
 
     .links a {
-        padding  : 0;
-        font-size: .7rem;
-    }
-
-    .bar {
-        width: 1.4rem;
+        padding  : .5rem 1rem  ;
     }
 }
 
 @media screen and (max-width:460px) {
 
-    .logo {
-        font-size: 1rem;
-    }
-
     .title {
-        font-size     : 1.5rem;
         letter-spacing: 0;
     }
-
-    .bar {
-        width: 1rem;
-    }
-
-    .links a {
-        font-size: .6rem;
-    }
-
+    
     .burguer-menu {
         margin-right: 1%;
     }
