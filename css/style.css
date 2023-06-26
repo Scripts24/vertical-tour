@@ -307,7 +307,6 @@ header {
 /*CONTACTO*/
 
 .contact {
-    margin             : 4rem 0;
     padding            : 2rem 7%;
     background  :  linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.267)), url('../img/bg-contact.jpg');
     background-size    : cover;
@@ -372,6 +371,64 @@ header {
     color: var(--color-white);
 }
 
+/*FOOTER*/
+
+footer{
+    padding: 8rem;
+    background: var(--bg-blue-2);
+    border-top: .4rem solid rgba(0, 0, 0, 0.233);
+    text-align: center;
+}
+
+footer .contacts{
+    padding: 1rem 0;
+}
+
+footer .contacts a{
+    font-size: 2rem;
+    color: var(--color-white);
+    margin: .3rem;
+    padding: .7rem;
+    transition:all .5s ease-in-out;
+}
+
+footer .contacts a:hover{
+    border: .3rem solid var(--bg-primary);
+}
+
+footer .go-link{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer .go-link a{
+    color: var(--color-white);
+    font-size: 2rem;
+    padding  : .7rem 1rem;
+    transition: .5s;
+}
+
+footer .go-link a:hover{
+    transform: scale(1.2);
+}
+
+footer .developed p{
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 2;
+}
+
+footer .developed img{
+    width: 22rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+    border: .2rem solid  #e6eaf0;
+}
+
 
 
 /* ====================================================================================== */
@@ -406,6 +463,10 @@ header {
 }
 
 @media screen and (max-width:460px) {
+
+    html {
+        font-size: 50%;
+    }
 
     .title {
         letter-spacing: 0;
