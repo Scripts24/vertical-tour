@@ -21,11 +21,12 @@
 
 html {
     font-size: 62.5%;
+    overflow-x : hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x : hidden;
 }
 
 /* PRELOADER */
@@ -81,6 +82,49 @@ body {
     animation    : load7 .6s infinite ease-in-out;
     box-shadow   : 0px 0px 40px -2px skyblue;
 }
+
+/* Upload */
+
+.top {
+    display: none;
+}
+
+.bi-chevron-double-up {
+    color        : var(--color-white);
+    font-size    : 2rem;
+    font-weight  : 700;
+    background   : var(--bg-primary);
+    text-align   : center;
+    right  : 3%;
+    padding      : .8rem;
+    border-radius: .3rem;
+    width        : 3.5rem;
+    height       : 3.5rem;
+    line-height  : 1;
+    position     : fixed;
+    bottom       : 20rem;
+    transition   : all .5s ease;
+    animation    : upload 3s infinite alternate;
+    cursor       : pointer;
+    z-index      : 10;
+}
+
+.bi-chevron-double-up:hover {
+    background: var(--color-white);
+    color     : var(--bg-primary);
+}
+
+@keyframes upload {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+
 
 .heading {
     text-align    : center;
