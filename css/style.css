@@ -717,7 +717,7 @@ header {
 
 .gallery .container-gsap .gallery-gsap .block-24 {
     top            : 10%;
-    left           : 65%;
+    left           : 50%;
     background     : url('../img/galeria/24.jpg') no-repeat 50% 50%;
     background-size: cover;
 }
