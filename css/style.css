@@ -138,7 +138,6 @@ body {
 }
 
 
-
 .heading {
     text-align    : center;
     color         : var(--bg-blue-2);
@@ -153,7 +152,6 @@ body {
     width          : 100vw;
     background     : linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary));
     transform-style: preserve-3d;
-
 }
 
 .navbar {
@@ -422,8 +420,6 @@ header {
     padding        : 4rem 1rem;
 }
 
-
-
 .content-activities {
     display              : grid;
     grid-template-columns: repeat(2, 1fr);
@@ -485,6 +481,46 @@ header {
 }
 
 
+/*CONÓCENOS*/
+
+.about {
+    padding        : 2rem 7%;
+    background     : linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.267)), url('../img/bg.jpg') no-repeat;
+    background-size: cover;
+}
+
+.about h2 {
+    padding-top: 4rem;
+}
+
+.about .row {
+    display    : flex;
+    align-items: center;
+    flex-wrap  : wrap;
+    padding: 4rem 0;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content p{
+    color: var(--bg-blue-2);
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding    : 1rem 0;
+}
+
+
 /*GALERÍA*/
 
 .gallery {
@@ -492,7 +528,7 @@ header {
     background-size: cover;
 }
 
-.cursor{
+.cursor {
     cursor: crosshair;
 }
 
