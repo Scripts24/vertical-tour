@@ -73,24 +73,23 @@
             <h2 class="heading">Actividades</h2>
 
             <div class="content-activities">
-                <div class="activitie1 text">
+                <div class="activitie1 text" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
                     <h3>Alpinismo</h3>
                     <button class="btn">Info</button>
                 </div>
-                <div class="activitie2 text">
+                <div class="activitie2 text"  data-tilt-reverse="true">
                     <h3>Esqui & Snowboard</h3>
                     <button class="btn">Info</button>
                 </div>
-                <div class="activitie3 text ">
+                <div class="activitie3 text "  data-tilt  data-tilt-glare data-tilt-max-glare="0.5">
                     <h3>Senderismo</h3>
                     <button class="btn">Info</button>
                 </div>
-                <div class="activitie4 text">
+                <div class="activitie4 text" data-tilt-reverse="true">
                     <h3>Trekking</h3>
                     <button class="btn">Info</button>
                 </div>
             </div>
-
         </section>
         <!--Fin Sección Tours-->
         <!--Sección Conócenos-->
@@ -152,8 +151,10 @@
                     <div class="block block-24"></div>
                 </div>
             </div>
+
         </section>
         <!--Fin Sección Galería-->
+
         <!--Sección Contacto-->
         <section class="contact" id="contact">
             <h2 class="heading">Contacto</h2>
@@ -218,6 +219,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
     <script src="./js/gsap.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll('.text'), {
+            glare: true,
+            reverse: true,
+            "max-glare": 0.5
+        })
+    </script>
 </body>
 
 </html>

@@ -497,7 +497,7 @@ header {
     display    : flex;
     align-items: center;
     flex-wrap  : wrap;
-    padding: 4rem 0;
+    padding    : 4rem 0;
 }
 
 .about .row .image {
@@ -509,13 +509,13 @@ header {
 }
 
 .about .row .content {
-    flex: 1 1 45rem;
+    flex   : 1 1 45rem;
     padding: 2rem;
 }
 
-.about .row .content p{
-    color: var(--bg-blue-2);
-    font-size: 1.8rem;
+.about .row .content p {
+    color      : var(--bg-blue-2);
+    font-size  : 1.8rem;
     font-weight: 600;
     padding    : 1rem 0;
 }
