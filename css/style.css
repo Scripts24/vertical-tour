@@ -480,6 +480,56 @@ header {
     clip-path          : polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
 }
 
+/*Cards expanding*/
+
+.container-cards {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    overflow       : hidden;
+    height         : 100vh;
+    margin         : 0;
+}
+
+.container-cards .card {
+    display: flex;
+    width  : 90vw;
+
+}
+
+.panel {
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
+    height             : 80vh;
+    border-radius      : 5rem;
+    color              : #fff;
+    cursor             : pointer;
+    flex               : .5;
+    margin             : 1rem;
+    position           : relative;
+    transition         : all 700ms ease-in;
+}
+
+.panel h3 {
+    font-size       : 2.5rem;
+    position        : absolute;
+    left            : 2.5rem;
+    top             : 2.5rem;
+    background-color: #0278bd63;
+    padding         : .5rem;
+    border-radius   : 1rem;
+    opacity         : 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity   : 1;
+    transition: opacity .3s ease-in .4s;
+}
 
 /*CONÓCENOS*/
 
@@ -861,6 +911,10 @@ footer .developed img {
     .content-activities {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
+
+    .panel {
+        height: 70vh;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -881,6 +935,10 @@ footer .developed img {
     .links a {
         padding: .5rem 1rem;
     }
+
+    .panel {
+        height: 60vh;
+    }
 }
 
 @media screen and (max-width:460px) {
@@ -895,6 +953,23 @@ footer .developed img {
 
     .burguer-menu {
         margin-right: 1%;
+    }
+
+    .container {
+        width: 100vw;
+    }
+
+    .panel {
+        height: 50vh;
+    }
+
+    .panel h3 {
+        font-size: 2rem;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
     }
 
 }
